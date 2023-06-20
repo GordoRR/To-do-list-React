@@ -1,0 +1,60 @@
+import logo from './logo.svg';
+import './App.css';
+import { useState } from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>TO-DO LIST</h1>
+      {TaskForm()}
+      {getTaskList(taskList)}
+    </div>
+  );
+}
+const taskList = [
+  {
+    taskID: 1,
+    taskName: "Pohnojit záhon",
+    taskPriority: 1,
+    taskCompleted: false,
+    taskDeadline: "2023-06-20"
+  },
+  {
+    taskID: 2,
+    taskName: "Domácí úkol",
+    taskPriority: 1,
+    taskCompleted: false,
+    taskDeadline: "2023-06-20"
+  },
+];
+
+function getTaskList(taskList) {
+  return taskList.map(task => {
+    return (
+      <div key={task.taskID} className='Task'>
+        <div>{task.taskName}</div>
+        <div><input type="checkbox"></input></div>
+        <div>{task.taskDeadline}</div>
+      </div>
+    );
+  });
+}
+function TaskForm() {
+  const [taskName, setTaskName] = useState('');
+  
+  return (
+    <div>
+      <input
+        value={taskName}
+        type='text'
+      />
+      <button onClick={e => setTaskName(e.target.value)}>ADD</button>
+    </div>
+  )
+}
+
+/*function addToList (item) {
+  const [taskList, setList] = useState([]);
+  setList([...taskList, item]);
+}*/
+export default App;
