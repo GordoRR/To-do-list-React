@@ -1,3 +1,126 @@
-.Task{
-display: flex;
+html,
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    background: rgb(131,58,180);
+    background: linear-gradient(135deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-attachment: fixed;
+    color: white;
+
+}
+
+.Task {
+    margin: 0 100px 0 100px;
+    padding: 10px 0 10px 0;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px white;
+    position: relative;
+
+}
+
+.Task>div {
+    padding-right: 10px;
+}
+
+.TodoApp {
+    background-color: rgba(124, 124, 124, 0.568);
+    width: 700px;
+    height: 1000px;
+    border: solid white 5px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.completed {
+    width: 30px;
+    height: 30px;
+
+}
+
+div {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 20px 0;
+}
+
+.InputContainer {
+    display: flex;
+
+    justify-content: center;
+    margin: 25px 0 25px 0;
+
+}
+
+.TaskNameInput {
+    font-size: 20px;
+    height: 30px;
+    width: 200px;
+}
+
+.AddTaskBtn {
+    width: 100px;
+}
+
+.afterDeadline {
+    background-color: rgb(187, 9, 9);
+}
+
+.TaskName {
+    font-weight: 600;
+}
+
+.DateTime {
+    width: 105px;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    right: 0;
+}
+
+.Date {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 5;
+}
+
+.Time {
+    font-weight: bold;
+}
+div.priority{
+    display:flex;
+    position: relative;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    padding-right: 0;
+    margin-right: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 10%;
+
+}
+.high{
+    color: red;
+    background: rgba(255, 0, 0, 0.300);
+}
+.mid{
+    color: orange;
+    background: rgba(255, 165, 0, 0.300);
+}
+.low{
+color: yellow   ;
+background: rgba(255, 255, 0, 0.300);
 }
